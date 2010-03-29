@@ -1,5 +1,4 @@
 #labels Phase-Deploy
-
 = Introduction =
 
 This page shows you how to use this aqpplication.
@@ -10,7 +9,7 @@ This page shows you how to use this aqpplication.
 
 To create a group you simply move to create group and then send invites to your friends. The password you used has to be communicated to your friends.
 
-To join a group you send   /join <GroupName> <password> to our bot.
+To join a group you send   /join GroupName password to our bot.
 
 To leave a group you send  /leave to our bot.
 
