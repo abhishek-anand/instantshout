@@ -1,0 +1,49 @@
+application: instantshout
+version: 3
+runtime: python
+api_version: 1
+
+inbound_services:
+- xmpp_message
+
+handlers:
+
+- url: /invite
+  script: app.py
+  secure: always
+
+- url: /groupInvite
+  script: app.py
+  secure: always
+
+- url: /createGroup
+  script: group.py
+  secure: always
+
+- url: /getPublicGroups
+  script: group.py
+  secure: always
+
+- url: /onlineCount
+  script: broadcast.py
+  secure: always
+
+- url: /getAllGroups
+  script: group.py
+  secure: always
+
+- url: /_ah/xmpp/message/chat/
+  script: chat.py
+
+- url: /jq
+  static_dir: jq
+
+- url: /inviteFriends
+  static_files: invitefriends.html
+  upload: invitefriends.html
+  secure: always
+
+- url: .*
+  static_files: app.html
+  upload: app.html
+  secure: always
